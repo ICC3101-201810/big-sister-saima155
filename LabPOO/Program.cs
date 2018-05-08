@@ -7,16 +7,22 @@ using System.Threading.Tasks;
 
 namespace LabPOO
 {
+
+    public delegate void nombredelegate(List<Product> cart, List<Product> receta);
+    public void nombremetodo
     class Program
     {
         public static List<Product> cart;
         public static List<Product> market;
+        public static List<Product> receta;
 
         static void Main(string[] args)
         {
             cart = new List<Product>();
             market = new List<Product>();
+            receta = new List<Product>();
             SupplyStore();
+            SupplyReceta();
             while (true)
             {
                 PrintHeader();
@@ -77,6 +83,7 @@ namespace LabPOO
 
         public static void WalkAround()
         {
+
             PrintHeader();
             Console.WriteLine("¿Que deseas comprar?\n\n");
             for (int i = 0; i < market.Count(); i++)
@@ -161,6 +168,47 @@ namespace LabPOO
             market.Add(new Product("Bolsa de Zanahorias", 890, 74, "1un"));
         }
 
+        public static void SupplyReceta()
+        {
+            receta.Add(new Product("Láminas de Lasaña", 1250, 85, "400g"));
+            receta.Add(new Product("Láminas de Lasaña", 1250, 85, "400g"));
+            receta.Add(new Product("Láminas de Lasaña", 1250, 85, "400g"));
+            receta.Add(new Product("Láminas de Lasaña", 1250, 85, "400g"));
+            receta.Add(new Product("Láminas de Lasaña", 1250, 85, "400g"));
+            receta.Add(new Product("Láminas de Lasaña", 1250, 85, "400g"));
+            receta.Add(new Product("Láminas de Lasaña", 1250, 85, "400g"));
+            receta.Add(new Product("Láminas de Lasaña", 1250, 85, "400g"));
+            receta.Add(new Product("Láminas de Lasaña", 1250, 85, "400g"));
+            receta.Add(new Product("Láminas de Lasaña", 1250, 85, "400g"));
+            receta.Add(new Product("Láminas de Lasaña", 1250, 85, "400g"));
+            receta.Add(new Product("Láminas de Lasaña", 1250, 85, "400g"));
+
+            receta.Add(new Product("Queso Parmesano", 3790, 41, "200g"));
+
+            receta.Add(new Product("Mantequilla", 850, 12, "125g"));
+
+            receta.Add(new Product("Carne Molida", 4390, 15, "500g"));
+
+            receta.Add(new Product("Vino Sauvignon Blanc Reserva Botella", 4150, 23, "750cc"));
+
+            receta.Add(new Product("Tomates Pelados en lata", 700, 48, "540g"));
+
+            receta.Add(new Product("Bolsa de Zanahorias", 890, 74, "1un"));
+
+            receta.Add(new Product("Malla de Cebollas", 1090, 91, "1kg"));
+
+            receta.Add(new Product("Aceite de Oliva", 1790, 77, "250g"));
+
+            receta.Add(new Product("Sal Lobos", 330, 150, "1kg"));
+
+            receta.Add(new Product("Pimienta", 430, 84, "15g"));
+
+            receta.Add(new Product("Harina", 890, 43, "1kg"));
+
+            receta.Add(new Product("Leche Entera", 820, 89, "1L"));
+
+
+        }
         public static void ShowRecipe()
         {
             Console.Clear();

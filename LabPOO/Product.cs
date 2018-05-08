@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace LabPOO
 {
+    public delegate void nombredelegate(object sender, string name, int price, int stock, string unit)
+
     class Product
     {
         private string name;
